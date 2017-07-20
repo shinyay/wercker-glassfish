@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if ! type asadmin &>/dev/null; then
+	error "GlassFish is not installed"
+else
+	info "GlassFish is installed"
+        asadmin list-commands
+fi
+
+if [ ! -n "$WERCKER_ASADMIN_SUBCOMMAND" ]; then
+	fail "Please specify asadmin subcommand"
+fi
+
+function run() {
+  if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
+    local settings="${WERCKER_ASADMIN_PARAMETER}"
+  fi
+
+  asadmin --user admin \
+          --passwordfile /tmp/gfpassword \
+          --interactive=false \
+          $WERCKER_ASADMIN_SUBCOMMAND \
+	  $WERCKER_ASADMIN_PARAMETER
+}
+
+run;
