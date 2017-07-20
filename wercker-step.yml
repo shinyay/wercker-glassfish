@@ -1,0 +1,14 @@
+name: asadmin
+version: 0.0.1
+description: run asadmin with commands
+keywords:
+  - glassfish
+  - asadmin
+properties:
+  subcommand:
+    type: string
+    required: true
+  parameter:
+    type: string
+    required: false
+
