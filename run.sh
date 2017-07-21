@@ -25,8 +25,10 @@ run() {
   asadmin --user admin \
           --passwordfile /tmp/gfpassword \
           --interactive=false \
-          "${WERCKER_ASADMIN_SUBCOMMAND}" \
-	  "${param}"
+	  start-domain \
+          domain1
+#         "${WERCKER_ASADMIN_SUBCOMMAND}" \
+#	  "${param}"
 }
 
 run;
