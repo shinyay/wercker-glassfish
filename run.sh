@@ -11,9 +11,9 @@ if [ ! -n "$WERCKER_ASADMIN_SUBCOMMAND" ]; then
 fi
 
 run() {
-#  if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
-#    local param="${WERCKER_ASADMIN_PARAMETER}"
-#  fi
+  if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
+    local param="${WERCKER_ASADMIN_PARAMETER}"
+  fi
   echo "[env]"
   env
   echo "[pwd]"
@@ -22,13 +22,18 @@ run() {
   ls -l
   echo "[ls -l /]"
   ls -l /
+
+  echo "asadmin --user admin \
+                --passwordfile /tmp/gfpassword \
+                --interactive=false \
+                ${WERCKER_ASADMIN_SUBCOMMAND} \
+                ${param}"
+  
   asadmin --user admin \
           --passwordfile /tmp/gfpassword \
           --interactive=false \
-	  start-domain \
-          domain1
-#         "${WERCKER_ASADMIN_SUBCOMMAND}" \
-#	  "${param}"
+          "${WERCKER_ASADMIN_SUBCOMMAND}" \
+	  "${param}"
 }
 
 run;
