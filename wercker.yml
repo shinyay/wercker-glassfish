@@ -1,5 +1,7 @@
 # Glassfish5 with Oracke JDK
-box: shinyay/docker-glassfish5
+box:
+  id: shinyay/docker-glassfish5
+  tag: latest
 build:
   steps:
     - script:
