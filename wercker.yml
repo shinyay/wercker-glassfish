@@ -1,4 +1,0 @@
-box: shinyay/docker-glassfish5:latest
-build:
-  steps:
-    - shellcheck
