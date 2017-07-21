@@ -11,7 +11,7 @@ if [ ! -n "$WERCKER_ASADMIN_SUBCOMMAND" ]; then
 	fail "Please specify asadmin subcommand"
 fi
 
-function run() {
+run() {
   if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
     local settings="${WERCKER_ASADMIN_PARAMETER}"
   fi
