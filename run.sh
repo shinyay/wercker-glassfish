@@ -20,7 +20,7 @@ run() {
           --passwordfile /tmp/gfpassword \
           --interactive=false \
           "${WERCKER_ASADMIN_SUBCOMMAND}" \
-	  ${settings}
+	  "${settings}"
 }
 
 run;
