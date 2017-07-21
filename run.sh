@@ -14,14 +14,8 @@ run() {
   if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
     local param="${WERCKER_ASADMIN_PARAMETER}"
   fi
-  echo "[env]"
-  env
-  echo "[pwd]"
-  pwd
-  echo "[ls -l]"
-  ls -l
-  echo "[ls -l /]"
-  ls -l /
+  echo "[WERCKER_ASADMIN_PARAMETER]"
+  echo "${param}"
 
   echo "asadmin --user admin \
                 --passwordfile /tmp/gfpassword \
