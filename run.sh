@@ -11,9 +11,9 @@ if [ ! -n "$WERCKER_ASADMIN_SUBCOMMAND" ]; then
 fi
 
 run() {
-  if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
+#  if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
 #    local param="${WERCKER_ASADMIN_PARAMETER}"
-  fi
+#  fi
   echo "[env]"
   env
   echo "[pwd]"

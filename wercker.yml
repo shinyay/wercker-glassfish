@@ -1,4 +1,4 @@
-box: wercker/default
+box: store/oracle/serverjre:8
 build:
   steps:
     - shellcheck
