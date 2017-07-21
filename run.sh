@@ -4,7 +4,6 @@ if ! type asadmin >/dev/null 2>&1; then
 	error "GlassFish is not installed"
 else
 	info "GlassFish is installed"
-        asadmin list-commands
 fi
 
 if [ ! -n "$WERCKER_ASADMIN_SUBCOMMAND" ]; then
