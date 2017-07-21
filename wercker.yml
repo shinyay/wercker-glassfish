@@ -1,4 +1,4 @@
-box: store/oracle/serverjre:8
+box: shinyay/docker-glassfish5:latest
 build:
   steps:
     - shellcheck
