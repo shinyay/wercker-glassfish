@@ -19,8 +19,8 @@ run() {
   asadmin --user admin \
           --passwordfile /tmp/gfpassword \
           --interactive=false \
-          $WERCKER_ASADMIN_SUBCOMMAND \
-	  $WERCKER_ASADMIN_PARAMETER
+          "${WERCKER_ASADMIN_SUBCOMMAND}" \
+	  ${settings}
 }
 
 run;
