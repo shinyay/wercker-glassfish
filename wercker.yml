@@ -1,8 +1,0 @@
-# Glassfish5 with Oracke JDK
-box:
-  id: shinyay/docker-glassfish5
-  tag: latest
-build:
-  steps:
-    - script:
-        code: touch "$WERCKER_OUTPUT_DIR/dummy"
