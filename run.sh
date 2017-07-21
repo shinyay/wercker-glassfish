@@ -12,22 +12,21 @@ fi
 
 run() {
   if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
-    param="${WERCKER_ASADMIN_PARAMETER}"
+    echo "[WERCKER_ASADMIN_PARAMETER]"
+    echo "${WERCKER_ASADMIN_PARAMETER}"
   fi
-  echo "[WERCKER_ASADMIN_PARAMETER]"
-  echo "${param}"
 
   echo "asadmin --user admin \
                 --passwordfile /tmp/gfpassword \
                 --interactive=false \
                 ${WERCKER_ASADMIN_SUBCOMMAND} \
-                ${param}"
+                ${WERCKER_ASADMIN_PARAMETER}"
   
   asadmin --user admin \
           --passwordfile /tmp/gfpassword \
           --interactive=false \
           "${WERCKER_ASADMIN_SUBCOMMAND}" \
-	  "${param}"
+	  "${WERCKER_ASADMIN_PARAMETER}"
 }
 
 run;
