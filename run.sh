@@ -12,7 +12,7 @@ fi
 
 run() {
   if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
-    local param="${WERCKER_ASADMIN_PARAMETER}"
+#    local param="${WERCKER_ASADMIN_PARAMETER}"
   fi
   echo "[env]"
   env
