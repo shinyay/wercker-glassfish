@@ -12,14 +12,21 @@ fi
 
 run() {
   if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
-    local settings="${WERCKER_ASADMIN_PARAMETER}"
+    local param="${WERCKER_ASADMIN_PARAMETER}"
   fi
-
+  echo "[env]"
+  env
+  echo "[pwd]"
+  pwd
+  echo "[ls -l]"
+  ls -l
+  echo "[ls -l /]"
+  ls -l /
   asadmin --user admin \
           --passwordfile /tmp/gfpassword \
           --interactive=false \
           "${WERCKER_ASADMIN_SUBCOMMAND}" \
-	  "${settings}"
+	  "${param}"
 }
 
 run;
