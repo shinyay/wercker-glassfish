@@ -12,7 +12,7 @@ fi
 
 run() {
   if [ -e "$WERCKER_ASADMIN_PARAMETER" ]; then
-    local param="${WERCKER_ASADMIN_PARAMETER}"
+    param="${WERCKER_ASADMIN_PARAMETER}"
   fi
   echo "[WERCKER_ASADMIN_PARAMETER]"
   echo "${param}"
