@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! type asadmin &>/dev/null; then
+if ! type asadmin >/dev/null 2>&1; then
 	error "GlassFish is not installed"
 else
 	info "GlassFish is installed"
